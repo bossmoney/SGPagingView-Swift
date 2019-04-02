@@ -144,7 +144,9 @@ extension SGPageContentCollectionView {
     }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        scroll = false
+        if decelerate == false {
+            scroll = false
+        }
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
